@@ -1,0 +1,304 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,700;1,500;1,700&display=swap');
+body{
+    font-family: "Ubuntu", sans-serif;
+    overflow-x: hidden;
+}
+.header_menu{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 6;
+}
+.navbar-toggler{
+    z-index: 6;
+}
+
+#carouselExampleCaptions img{
+    height: 100vh;
+    object-fit: cover;
+    transform-origin: center;
+    position: relative;
+    z-index: 2;
+    /* filter: blur(3px); */
+    animation: grow 10000ms ease;
+    animation-iteration-count: infinite;
+    overflow: hidden;
+}
+@keyframes grow {
+	0% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(1.1);
+	}
+}
+.before_blur{
+    position: relative;
+}
+.before_blur:before{
+    content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+    backdrop-filter: blur(2px);
+    z-index: 4;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.carousel-caption{
+    top:30%;
+    z-index: 5;
+}
+.carousel-caption h5, .parallax_block h5{
+    font-size: 80px;
+    font-weight: 700;
+    color: #4d8b55;
+    text-shadow:1px 0 1px #fff, 
+    0 1px 1px #fff, 
+    -1px 0 1px #fff, 
+    0 -1px 1px #fff;
+    z-index: 5;
+    text-align: center;
+}
+.carousel-caption p{
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.follow_block{
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    color: #fff;
+    z-index: 5;
+}
+.carousel-control-prev, .carousel-control-next{
+    z-index: 5;
+}
+.main_button{
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    z-index: 6;
+    text-align: center;
+}
+.main_button a{
+    max-width: 250px;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 35px;
+    border-radius: 35px;
+    color:#fff;
+    background-color: #4d8b55;
+}
+.header_logo{
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 5;
+    
+}
+.header_logo img{
+    display: block !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin: 0 auto;
+    animation: normal !important;
+}
+
+@media screen and (max-width: 420px){
+    .carousel-caption{
+        top:20%;
+    }
+    .carousel-caption h5{
+        font-size: 56px;
+        font-weight: 700;
+        /* color: #4d8b55; */
+    }
+    .carousel-caption p{
+        font-size: 30px;
+        /* line-height: 1.2; */
+    }
+    .parallax_block{
+        background-position: right;
+    }
+    .parallax_block h5{
+        line-height: 1 !important;
+        font-size: 56px;
+    }
+}
+
+/* second block */
+.second_block{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: url(../img/paper_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    justify-content: center;
+    min-height: 400px;
+}
+.item_block img{
+    display: block;
+   margin: 0 auto;
+   transition: .3s;
+}
+.item_block img:hover{
+    transform: scale(1.1);
+}
+.item_block{
+    text-align: center;
+    max-width: 400px;
+    margin-bottom: 30px;
+}
+.item_block p{
+    line-height: 1.2;
+}
+
+/* Parallax block */
+.parallax_block{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+    background-image: url(../img/house_parallax.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+}
+@media screen and (max-width: 1100px) {
+    .parallax_block h5{
+        text-align: center !important;
+    }
+
+    .parallax_block p{
+        z-index: 5px;
+        color: #fff;
+        text-align: center;
+        max-width: 500px;
+        margin: 0 auto;
+    }       
+}
+.parallax_block h5{
+    line-height: .8;
+    text-align: left;
+}
+
+.nogreen{
+    color: #fff !important;
+}
+.parallax_block p{
+    z-index: 5px;
+    color: #fff;
+    text-align: left;
+    max-width: 500px;
+}
+.address_block p{
+    margin: 0;
+    padding: 0;
+}
+
+.address_block .green{
+    color: #4d8b55;
+    font-size: 28px;
+    font-weight: 700;
+}
+.location_block img{
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+.parallax_button{
+    margin-top: 100px;
+}
+.parallax_button a{
+    max-width: 250px;
+    text-decoration: none;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 35px;
+    border-radius: 35px;
+    color:#fff;
+    background-color: #4d8b55;
+}
+/* Middle block */
+.middle_block{
+    background-image: url(../img/paper_bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+}
+/* Footer block */
+.footer_block{
+    background-image: url(../img/footer-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    position: relative;
+    padding-top: 100px;
+    color: #fff;
+}
+.blur_footer::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    opacity: .6;
+    z-index: 5;
+    backdrop-filter: blur(5px);
+}
+.black_footer::before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: .5;
+    z-index: 5;
+    /* backdrop-filter: blur(5px); */
+}
+.footer_block .row{
+    position: relative;
+    z-index: 6;
+}
+.footer_phones p{
+    margin: 0;
+    padding: 0;
+}
+.footer_logo{
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.footer_logo img{
+    width: 120px;
+    height: 120px;
+
+}
+.follow_footer{
+    padding-top: 140px;
+}
+.follow_footer ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+.follow_footer ul li{
+    margin: 15px;
+    font-size: 22px;
+    color: #4d8b55;
+}
